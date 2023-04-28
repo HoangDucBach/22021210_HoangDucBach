@@ -8,7 +8,7 @@ Snake::Snake(Game& _game, Position start)
     : head(new SnakeNode(start)), tail(head), game(_game), cherry(0)
 {
     // Using Game.snakeMoveTo method to move Snake to start position;
-    game.snakeMoveTo(start);    
+    game.snakeMoveTo(start);
 }
 
 // set some attributes as default value
@@ -18,7 +18,7 @@ Snake::~Snake()
 {
     /*
         Loop: SnakeNode p = tail; p != nullptr;
-        
+
         Do:
             SnakeNode* nextNode = p->next;
             // delete p;
@@ -59,6 +59,7 @@ void Snake::growAtFront(Position newPosition)
     // head of snake grow at new position
 	
     /* YOUR CODE HERE */
+
     head->next = new SnakeNode(newPosition, nullptr);
     head = head->next;
 }
