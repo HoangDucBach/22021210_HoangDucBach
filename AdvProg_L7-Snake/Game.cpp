@@ -147,6 +147,8 @@ void Game::nextStep()
 			currentDirection = next;
 			break;
 		}
+	}
+	snake.move(currentDirection);
 }
 
 
